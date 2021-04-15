@@ -1,5 +1,6 @@
 import random
 import discord
+import time
 from discord.ext import commands
 
 ###### ШУТКИ ######
@@ -116,17 +117,21 @@ async def паста(ctx):
 @bot.command()
 async def rbot(ctx):
     await ctx.send("Йоу, мудилы! У вас одна минута на вход в игру")
-    emoji = '✅'
-    message = await ctx.send
-    await message.add_reaction(emoji)
+    time.sleep(5)
+    await ctx.send(random.choice(r_beg))
 
+@bot.event
+async def on_message(message):
+    content = message.content.lower()
+            await bot.send_message(message.channel, "ohuenno zachital repchik")
+                print("Waiting for test")
+                msg = await bot.wait_for_message(author=message.author, check=thanks_check)
+                if msg:
+                    print("test") 
+                    await bot.send_message(message.channel, "respekt devochka")
 
-
-
-
-
-
-
+    
+    
 
 
 
