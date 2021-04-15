@@ -113,9 +113,13 @@ async def шутки(ctx):
 async def паста(ctx):
     await ctx.send(random.choice(pasta))
 
-
-
-    
+@bot.command()
+async def rbot(ctx):
+    user = message.author
+    await ctx.send("Йоу, мудилы! У вас одна минута на вход в игру")
+    emoji = '✅'
+    msg = ctx.get_message
+    await msg.add_reaction(emoji)
 ###### КЛИЕНТ ######
 
 client = MyClient()
