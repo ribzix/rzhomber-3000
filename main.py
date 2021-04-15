@@ -123,7 +123,7 @@ async def rbot(ctx):
 @bot.event
 async def on_message(message):
     content = message.content.lower()
-            await bot.send_message(message.channel, "ohuenno zachital repchik")
+     await bot.send_message(message.channel, "ohuenno zachital repchik")
                 print("Waiting for test")
                 msg = await bot.wait_for_message(author=message.author, check=thanks_check)
                 if msg:
