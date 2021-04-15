@@ -115,11 +115,14 @@ async def паста(ctx):
 
 @bot.command()
 async def rbot(ctx):
-    user = message.author
     await ctx.send("Йоу, мудилы! У вас одна минута на вход в игру")
     emoji = '✅'
-    msg = ctx.get_message
-    await msg.add_reaction(emoji)
+    message = await channel.send('Йоу, мудилы! У вас одна минута на вход в игру')
+    await message.add_reaction(emoji)
+
+
+    
+    
 ###### КЛИЕНТ ######
 
 client = MyClient()
