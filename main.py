@@ -117,12 +117,19 @@ async def паста(ctx):
 async def rbot(ctx):
     await ctx.send("Йоу, мудилы! У вас одна минута на вход в игру")
     emoji = '✅'
-    message = await channel.send('Йоу, мудилы! У вас одна минута на вход в игру')
+    message = await ctx.send
     await message.add_reaction(emoji)
 
 
-    
-    
+
+
+
+
+
+
+
+
+
 ###### КЛИЕНТ ######
 
 client = MyClient()
